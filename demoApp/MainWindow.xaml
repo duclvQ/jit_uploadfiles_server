@@ -1,0 +1,36 @@
+﻿<Window x:Class="Upload_videos_demoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Upload_videos_demoApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Width="300" Height="20">
+    Type http address into texbox below then press enter
+            </TextBlock>
+            <TextBox Text ="http://localhost:8787/" Width="300" Height="30" Name="httpAddress" KeyDown="OnKeyDownHandler"/>
+            <TextBlock Width="451" Height="24" Name="textBlock1"/>
+
+        </StackPanel>
+        <Grid x:Name="previous" HorizontalAlignment="Left" Height="249" Margin="129,175,0,0" VerticalAlignment="Top" Width="563">
+            <TextBox Name="txtEditor" />
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="249" VerticalAlignment="Center" Width="563"/>
+        </Grid>
+        <Grid x:Name="upload1" HorizontalAlignment="Left" Height="56" Margin="129,77,0,0" VerticalAlignment="Top" Width="563">
+            <ProgressBar x:Name ="uploadProgress" Margin="92,22,96,21" Opacity="0.3" SmallChange="0.1"/>
+
+            <Button x:Name="btnOpenFile_Click" Click="OpenFileDialogForm" Content="Choose file" HorizontalAlignment="Left" Height="36" Margin="10,0,0,0" VerticalAlignment="Center" Width="72" FontWeight="Bold" BorderBrush="White" Background="#FFD9D9D9"/>
+            <Button x:Name="btnSubmit_Click" Click="SubmitVideoButton" Content="Submit" HorizontalAlignment="Right" Height="36" Margin="10,0,0,0" VerticalAlignment="Center" Width="72" FontWeight="Bold" BorderBrush="White" Background="#FFD9D9D9"/>
+
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="56" VerticalAlignment="Center" Width="563">
+                <TextBox x:Name="filePath" HorizontalAlignment="Left" Height="22" Margin="89,17,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="380" Opacity="0.5"/>
+            </Border>
+
+        </Grid>
+        <Viewbox d:IsHidden="True"/>
+
+    </Grid>
+</Window>

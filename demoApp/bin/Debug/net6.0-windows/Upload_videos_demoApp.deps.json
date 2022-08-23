@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Upload_videos_demoApp/1.0.0": {
+        "runtime": {
+          "Upload_videos_demoApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Upload_videos_demoApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
